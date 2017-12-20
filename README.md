@@ -1,2 +1,7 @@
-# skeletonic
-💀 Skeletonic is a dead on, lightweight, responsive and modern CSS framework
+# Wing
+
+A minimal CSS framework.
+
+### What?
+
+Welcome to the `gh-pages` branch. Here is the code for the docs.
