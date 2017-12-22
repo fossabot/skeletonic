@@ -215,10 +215,14 @@ h6 {
 /* @end */
 /* @group Lists */
 table {
+  border: 1px solid #e1e2e2;
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
+<<<<<<< HEAD
   border: 1px solid #e1e2e2;
+=======
+>>>>>>> Updated CSS and HTML
   padding-bottom: 25px;
 }
 thead {
