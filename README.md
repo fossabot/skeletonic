@@ -6,6 +6,6 @@
 
 <h3 align="center">Skeletonic</h3>
 
-<p align="center">Meet the sleek, lightweight, intuitive and ultra-responsive CSS framework.</p>
-<p align="center">Designed to fit your web life.</p>
-<p align="center">V1.0.0</p>
+<p align="center">Skeletonic is a lightweight, intuitive and ultra-responsive CSS framework to speed up your Digital and Mobile Web development needs.</p>
+<p align="center">Simply designed to fit your web life.</p>
+<p align="center">v0.0.1</p>
