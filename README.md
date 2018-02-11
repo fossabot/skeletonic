@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="https://skeletonic.io">
-		<img src="/images/logo.png" alt="Skeletonic Logo"  />
+		<img src="/images/logo.png" alt="Skeletonic Logo" title="Skeletonic Logo"  />
 	</a>  
 </p>
 
