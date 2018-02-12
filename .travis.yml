@@ -8,21 +8,21 @@ script: gulp
 notifications:
   email: false
 after_success:
-  - export GIT_TAG=build-$TRAVIS_BRANCH-$(date -u "+%Y-%m-%d")-$TRAVIS_BUILD_NUMBER
-  - echo -n $GIT_TAG > v0.1.$TRAVIS_BUILD_NUMBER
-  - git commit -m "Set build VERSION number to v1.0."$TRAVIS_BUILD_NUMBER
-  - git tag $GIT_TAG -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
-  - git push --quiet https://$GITHUBKEY@github.com/reedia/dotfiles $GIT_TAG > /dev/null 2>&1    
+- export GIT_TAG=build-$TRAVIS_BRANCH-$(date -u "+%Y-%m-%d")-$TRAVIS_BUILD_NUMBER
+- echo -n $GIT_TAG > v0.1.$TRAVIS_BUILD_NUMBER
+- git commit -m "Set build VERSION number to v1.0."$TRAVIS_BUILD_NUMBER
+- git tag $GIT_TAG -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
+- git push --quiet https://$GITHUBKEY@github.com/reedia/dotfiles $GIT_TAG > /dev/null
+  2>&1
 deploy:
   provider: releases
-  skip-cleanup: true
-  keep-history: true
-  name: Skeletonic v1.0.$TRAVIS_BUILD_NUMBER
-  body: "<strong>Change Log:</strong><br />Release created on $(date +'%d/%m/%Y')
-    at $(date +'%T')<br />A sleek, lightweight, intuitive and ultra-responsive CSS framework. Designed to
-    fit your web life."    
   api_key:
-    secure: ZVrYsGOfa2vrCPnuQUm4Oww1K8s8wUwIROMOf9xDIhBqlwXLLIY4yhQHrSydHJzsO5cgd6ll0b5EGwD286xtk3kKi0WrTMpXnEk3c0o+tro4QsRNdJfosthjgda4qDKpXEdYp9Czv7M31ioncYpRAGEBYx+qVIXhrmvlwAIHPp7tEkuUsOC+Fg0uB36GxG9INJswYDriVJnw+ackfDXftKYw2KrOigNQ2FePXkfV9BiZxxalYfjScHvEYz5vuy6VM1XN3CYgXqjCo6f83wtL17Tw0Jvrxivr2C8heUPiPHty3mymQdKm2j2m9ob/yUPrBG/x/KK43TqNqeafNDCj1ipNlbmtk/Ou/kk8QN0rm7fMG7HDxSTitmmsj84ByC4KO+bywJxXUtvyMHXouSoQfQX/ApgCyr3LakNTK2lucy/hjtbQ6E51mqCHLKaSc3O9qPnn2M2UlvzKq0aDCHmmXhj6kOUdekTEWZKHKPKgHAUYlnL0JRvtsnekW3qILyyfroFGxfihCy2nuKOMezWS/NVfOttJCzumr9cMJJuArW7S2lYlEmQSVOscVVNtYf1C/bHz29+zu5ibGlS3QwKNESaSSAyG+ALmq6d+4KrQ8XyQ3Ne/j7u+FqmSEmCFOa2adyCyzSfxsw9RJpqjd0skTOR7X/u+i+ZALVjCO8afPp0=
+    secure: tV8YiXHvRLKVM2LwSahfe4yVhcQanMAd3Esx3j+AytnWqnXsFrulgsZnc4OLKvbWK8yiEa8AuNg4krqcd5E3i5lwrh0SScKayPu57g5SZIw9Y5bo1EkxV7Gr9kijffV3DnYXaw//z4ZhbbMud+aolyylPzrMjoGeY95ozJP1tx5uWrIEwU+Y9CrdeHiz788NTsXyUDZcrzC869lPpGjKa9AOnNi44pt2cPTKsmSFimvXL1vjE79UNz4tx9Ss1WQO6vwxvE+rol5/lUNJ3yfxp1lTluqvikdWSHiza6d6PwnSSKu/EDMuKuEi8vMvq+Ri+kBH60DAKXIBq8ByDxAGMobomGabsb55vA13gv+JlwsQI9tDtooCZ2p0QToOzPEHnbmhnB9Y/LmNlIE3vF0v6IKd6qzb9SqrNP+hflhx/5PvClmvakPVzgi5puqWBtpYYmXRv+tXjWVcb+AUHuL0p1SxMTCmyeI6r6GlXQxEQy2Ta1Grb9cZiXOaGHUtSbwSg89tAqRHVk79QwYKmG6JUnTG3YZgow4LANemTUvdNFpuaLHRU6eOzh7FLQi17bvddM+c81PCZfUEpE5+WcNzL45o4SKzxfNiWSMmPzkKLAJH5wdBaYl/QidrGbyOkmo5qD8IySyGtFGfqsXa+AqA1s3vx9D90ZbKtONSik+HEsA=
+  skip_cleanup: true
+  name: Skeletonic's Website (gh-pages) v1.0.$TRAVIS_BUILD_NUMBER
+  body: "<strong>Change Log:</strong><br />Release created on $(date +'%d/%m/%Y')
+    at $(date +'%T')<br />A sleek, lightweight, intuitive and ultra-responsive CSS
+    framework. Designed to fit your web life."
   on:
     repo: reedia/skeletonic
     branch: gh-pages
